@@ -29,7 +29,6 @@ def get_environment(
             restored_environment = new_env
             if enable_docker is not None:
                 DockerConfiguration(use_docker=True)
-            restored_environment.register(workspace)
 
         if restored_environment is not None:
             print(restored_environment)
