@@ -2,7 +2,7 @@
 import os
 from azureml.core import Workspace, Environment
 from ml_service.util.env_variables import Env
-from azureml.core.runconfig import DEFAULT_CPU_IMAGE, DEFAULT_GPU_IMAGE
+from azureml.core.runconfig import DockerConfiguration
 
 
 def get_environment(
@@ -28,8 +28,7 @@ def get_environment(
             )  # NOQA: E501
             restored_environment = new_env
             if enable_docker is not None:
-                restored_environment.docker.enabled = enable_docker
-                restored_environment.docker.base_image = DEFAULT_GPU_IMAGE if use_gpu else DEFAULT_CPU_IMAGE  # NOQA: E501
+                docker_conf = DockerConfiguration(use_docker=True)
             restored_environment.register(workspace)
 
         if restored_environment is not None:
