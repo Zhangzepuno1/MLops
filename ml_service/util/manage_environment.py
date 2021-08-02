@@ -28,7 +28,7 @@ def get_environment(
             )  # NOQA: E501
             restored_environment = new_env
             if enable_docker is not None:
-                docker_conf = DockerConfiguration(use_docker=True) # NOQA: E501
+                DockerConfiguration(use_docker=True)
             restored_environment.register(workspace)
 
         if restored_environment is not None:
