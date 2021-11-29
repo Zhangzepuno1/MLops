@@ -3,7 +3,7 @@
 
 # In[9]:
 
-
+!pip install azureml-defaults
 from azureml.core import Workspace
 
 
