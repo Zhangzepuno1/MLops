@@ -3,7 +3,7 @@
 
 # In[9]:
 import os
-os.system("pip install azureml-defaults")
+os.system("pip install azureml-defaults==1.34.0")
 
 from azureml.core import Workspace
 
