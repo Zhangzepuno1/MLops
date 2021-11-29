@@ -2,8 +2,9 @@
 # coding: utf-8
 
 # In[9]:
+import os
+os.system("pip install azureml-defaults")
 
-!pip install azureml-defaults
 from azureml.core import Workspace
 
 
